@@ -20,17 +20,7 @@
   analytics.page();
   }}(); // End of Segment header Script //   
 </script>
-<script>
-    analytics.identify('12091906-01011992', {
-  name: 'Grace Hopper',
-  email: 'grace@usnavy.gov'
-}); // Segment Identify //
-    </script>
-    
-<script>
-    analytics.page('Homepage', {
-}); // Segment Page call //
-    </script>
+
     <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -130,6 +120,17 @@
 </head>
 
 <body class="w3-light-grey">
+    <script>
+    analytics.identify('12091906-01011992', {
+  name: 'Grace Hopper',
+  email: 'grace@usnavy.gov'
+}); // Segment Identify //
+    </script>
+    
+<script>
+    analytics.page('Homepage', {
+}); // Segment Page call //
+    </script>
     <div>
         <label for="id">User Id:</label>
         <input type="text" id="myInput">
