@@ -12,30 +12,56 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
-	    
-	    // Segment Header Script// 
-	      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-  analytics.load("eZ57UgLB7pvkMGGxGbvTILDbBXHHb6Mu");
-  analytics.page();
-  }}();
-	    // End of Segment Header Script// 
-	    
-	    // Segment identify call//
-	    analytics.identify('f4ca124298', {
-  name: 'Michael Bolton',
-  email: 'mbolton@example.com'
-});
+        // Segment Header Script// 
+        ! function() {
+            var analytics = window.analytics = window.analytics || [];
+            if (!analytics.initialize)
+                if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+                else {
+                    analytics.invoked = !0;
+                    analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"];
+                    analytics.factory = function(t) {
+                        return function() {
+                            var e = Array.prototype.slice.call(arguments);
+                            e.unshift(t);
+                            analytics.push(e);
+                            return analytics
+                        }
+                    };
+                    for (var t = 0; t < analytics.methods.length; t++) {
+                        var e = analytics.methods[t];
+                        analytics[e] = analytics.factory(e)
+                    }
+                    analytics.load = function(t, e) {
+                        var n = document.createElement("script");
+                        n.type = "text/javascript";
+                        n.async = !0;
+                        n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+                        var a = document.getElementsByTagName("script")[0];
+                        a.parentNode.insertBefore(n, a);
+                        analytics._loadOptions = e
+                    };
+                    analytics.SNIPPET_VERSION = "4.1.0";
+                    analytics.load("eZ57UgLB7pvkMGGxGbvTILDbBXHHb6Mu");
+                    analytics.page();
+                }
+        }();
+        // End of Segment Header Script// 
 
-	    
-	    // End of Segment identify Call// 
-	    
-	    // Segment Track Call //
-	    analytics.track('Home page viewed', {
-  title: 'Home page'
-});
-	    // End of track call // 
-	    
-	    
+        // Segment identify call//
+        analytics.identify('f4ca124298', {
+            name: 'Michael Bolton',
+            email: 'mbolton@example.com'
+        });
+
+        // End of Segment identify Call// 
+
+        // Segment Track Call //
+        analytics.track('Home page viewed', {
+            title: 'Home page'
+        });
+        // End of track call // 
+
         const PROXY_URL = "https://se-personalization-proxy.herokuapp.com"
         const PERSONAS_KEY = "7GeEGoj4cK_zMQfcA_ikdzOsJDBNbB8SjMI8scTFzy2nbLcLtjnUv1oj_0Jrv14ko9B8KerUk8NRJlsJlmKo3hHj_lYYqTU6wzh2Hnr5HXBKNJBseruwjUpp1otte9SjG1a0WrX76_oLcBEx7__QQboU8L691tDZS2mrgNGjdt7LZoHOhtsb-H5vOTzK9qXq2LRtDOV4FE4j"
         const PERSONAS_WORKSPACE = "StMhuCTm6W"
